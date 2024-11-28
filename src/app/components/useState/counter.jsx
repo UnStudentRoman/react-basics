@@ -3,10 +3,10 @@ import { useState } from "react";
 import styles from './counter.module.css'
 
 const Counter = () => {
-  let [ counter, setCounter ] = useState(0);
+  const [ counter, setCounter ] = useState(0);
 
   const addCounter = () => {
-    setCounter(counter += 1);
+    setCounter((prevCounter) => prevCounter + 1);
   };
 
   const rmCounter = () => {
